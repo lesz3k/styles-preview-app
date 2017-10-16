@@ -13,7 +13,7 @@ class SideNav extends Component {
   }
 
   render(){
-    const {newStyles, activeNav} = this.state
+    const {activeNav} = this.state
 
     return (
         <div className={activeNav ? "reactapp-side-nav side-nav-active" : "reactapp-side-nav side-nav-closed"}>

@@ -108,17 +108,6 @@ export const singleView = (state={}, action)=> {
   }
 }
 
-export const components = (state={}, action)=> {
-  switch (action.type) {
-
-    case C.ADD_COMPONENTS:
-
-      return {}
-
-    default: return state
-  }
-}
-
 export const compType = (state="default", action)=> {
   switch (action.type) {
 

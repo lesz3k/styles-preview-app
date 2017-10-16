@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import {store} from './store/store';
-import {changeStyle, addComponents, addCompName, changeSingleView, changeListView} from './store/actionCreators'
+import {addCompName, changeSingleView, changeListView} from './store/actionCreators'
 import './styles.css';
 import ItemsList from './Views/ItemsList'
 import SingleItem from './Views/SingleItem'

@@ -45,7 +45,7 @@ window.addEventListener("DOMContentLoaded", function() {
           tile.appendChild(buttonContainer)
 
       let thisNode = document.getElementById('reactapp-container')
-              //document.querySelectorAll('body').appendChild(overlay)
+
           btn.onclick = () => {
             const store = storeFactory()
             document.getElementById('overlay').className+='active'

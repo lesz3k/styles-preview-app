@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import stylesJSON from './compStyles/compStyles';
-
-const styles = stylesJSON.contentTile.Layout
 
 class ContentTile extends Component {
   constructor(props) {
@@ -14,10 +11,9 @@ class ContentTile extends Component {
 
   fontColorChange(){
     let figBg = this.refs.figureBg,
-    bgColor = window.getComputedStyle(figBg).getPropertyValue('background-color'),
-    allText = figBg.getElementsByTagName("*");
+        bgColor = window.getComputedStyle(figBg).getPropertyValue('background-color')
     //setting font color
-    if (!(bgColor == 'rgba(0, 0, 0, 0)')) {
+    if (!(bgColor === 'rgba(0, 0, 0, 0)')) {
         var rgb = /rgb\((\d+), (\d+), (\d+)\)/.exec(bgColor);
         var r = rgb[1],
             g = rgb[2],
@@ -44,7 +40,7 @@ class ContentTile extends Component {
     const {classNames, title, subtitle, text, img} = this.props
     let ifSubtitle = null
 
-    subtitle!=false ? ifSubtitle = <p className="content-tile-subtitle">{subtitle}</p> : true
+    subtitle!==false ? ifSubtitle = <p className="content-tile-subtitle">{subtitle}</p> : true
 
     return (
         <div className={classNames}>

@@ -48,13 +48,6 @@ export const changeListView = (propsObject, arr, val, compName, classNames, titl
   img
 })
 
-export const addComponents = (compName, style) =>
-({
-  type:C.ADD_COMPONENTS,
-  compName,
-  style
-})
-
 export const addCompName = compName =>
 ({
   type: C.ADD_COMP_NAME,
