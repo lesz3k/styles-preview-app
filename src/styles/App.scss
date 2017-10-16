@@ -1,0 +1,272 @@
+.content-tile {
+  //width:310px;
+  position: relative;
+  &:hover {
+    #button-container{
+      opacity: 0.7;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+.my-react-app .content-tile {
+  width:310px;
+}
+.react-container .content-tile {
+  max-width:600px;
+  width:100%;
+  .dark-background {
+    *:not(a){
+      color:#fff!important;
+    }
+  }
+}
+.react-container .react-subcontainer--multiple-items .content-tile {
+  max-width: 800px;
+}
+
+body .slick-prev:before, body .slick-next:before {
+  //color:#000;
+  font-size: 45px;
+}
+
+.slick-slide{
+  padding-right: 20px;
+}
+.slick-dots li button:before {
+  font-size: 14px;
+}
+
+body .slick-next, body .slick-prev {
+  width:60px;
+  height:60px;
+  background: #696a71;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  &:hover {
+    background: #37383c;
+  }
+}
+body .slick-prev{
+  left: -74px;
+  &:before{
+    content: "\f104";
+    font-family: FontAwesome;
+    opacity: 1;
+  }
+}
+body .slick-next{
+  right:-80px;
+  &:before{
+    font-family: FontAwesome;
+    content: "\f105";
+    opacity: 1;
+  }
+}
+
+.container {
+  position: relative;
+}
+.react-container{
+  &.active {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom:20px;
+    z-index: 10000;
+  }
+  .bgcolor--default figure{
+    background: #fff;
+  }
+}
+.react-subcontainer {
+  padding: 60px 80px 50px 139px;
+  height: 100%;
+  background: #f5f5f5;
+  position: relative;
+  overflow-x: hidden;
+  .items-showcase {
+    height: 100%;
+    margin-top: 0;
+    .content-tile {
+      width:auto;
+      margin:0!important;
+    }
+  }
+  h3, h4, .style-name {
+
+  }
+  .styles-description {
+    height: 110px;
+  }
+}
+
+.slick-slider {
+  height: 100%;
+}
+
+.hide-items{
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index:100;
+  button {
+    border-color: transparent;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 25px;
+    background: #696a71;
+    padding: 10px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    &:hover {
+      background: #37383c;
+      text-decoration: none;
+    }
+  }
+}
+
+#button-container{
+  position: absolute;
+  top: 0;
+  right:0;
+  opacity: 0;
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  transition: all 0.1s;
+  &:hover{
+    opacity: 1;
+  }
+  button {
+    position: relative;
+    border-radius: 2px;
+    border-color: transparent;
+    box-shadow: none;
+    color: #ffffff;
+    font-size: 14px;
+    background: #37383c;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    top: 0;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    cursor: pointer;
+    //width:60px;
+    &:after{
+      position: relative;
+      right:0;
+      font-family: FontAwesome;
+      content: "\f101";
+      display: inline-block;
+      font-size: 16px;
+      padding-left: 10px;
+      -webkit-transition: all 0.2s;
+      -moz-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s;
+    }
+    &:hover {
+      //background: #266282;
+      text-decoration: none;
+      &:after {
+        right: -2px;
+      }
+    }
+  }
+}
+
+#overlay.active{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right:0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.reactapp--style-block {
+  display: inline-block;
+  padding: 20px;
+  p {
+    padding: 0;
+    margin: 0;
+    color: #fff;
+  }
+  &:nth-child(even){
+    background: #696a71;
+  }
+  &:nth-child(odd){
+    //background: #37383c;
+  }
+  .reactapp--style-block-dropdown {
+     cursor: pointer;
+     background: #fff;
+     height: 30px;
+     overflow: hidden;
+     width: 100%;
+     position: relative;
+     margin-top:10px;
+     &:after {
+       pointer-events: none;
+       font-family: FontAwesome;
+       content: "\f107";
+       display: block;
+       background: #929292;
+           color: #fff;
+       width: 30px;
+       height: 30px;
+       position: absolute;
+       top: 0;
+       right: 0;
+       font-size: 24px;
+       padding: 3px 0 4px 7px;
+     }
+  }
+  select {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    height: 29px;
+    padding: 5px; /* If you add too much padding here, the options won't show in IE */
+    width: 110%;
+  }
+}
+
+.react-subcontainer--multiple-items, .react-subcontainer--single-item  {
+  display: none;
+  z-index:103;
+  &.active {
+    display: block;
+    z-index:105;
+  }
+}
+.react-subcontainer--multiple-items .slider-options {
+  margin-top:7px;
+}
+.react-subcontainer--multiple-items .slider-options .reactapp--style-block{
+  width: 200px;
+  padding-left: 0;
+  margin-right:20px;
+  &:nth-child(even) {
+    background: transparent;
+  }
+  p {
+    color: #444444;
+  }
+}

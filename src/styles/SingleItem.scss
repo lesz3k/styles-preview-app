@@ -1,0 +1,24 @@
+.react-subcontainer--single-item {
+  padding-top: 20px;
+  .reactapp-side-nav--blocks >.reactapp--style-block{
+        background: #696a71;
+  }
+  p {
+    margin-top:6px;
+  }
+    /*.reactapp--style-block {
+      background: transparent;
+      padding: 10px 20px;
+      width:230px;
+      p {
+        color:#000;
+      }
+    }*/
+
+}
+.react-subcontainer--single-item-result {
+  margin-top: 40px;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+}

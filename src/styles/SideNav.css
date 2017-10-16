@@ -1,0 +1,49 @@
+.reactapp-side-nav {
+  width: 372px;
+  height: 100%;
+  background: #41434c;
+  position: absolute;
+  top: 60px;
+  left: -312px;
+  z-index: 103;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  overflow-y: hidden; }
+  .reactapp-side-nav.side-nav-active {
+    left: 0;
+    overflow-y: scroll; }
+  .reactapp-side-nav .reactapp-side-nav--container {
+    position: relative;
+    padding: 0 60px 20px 0; }
+  .reactapp-side-nav .reactapp-side-nav--title {
+    padding: 21px;
+    margin: 0; }
+  .reactapp-side-nav .reactapp--style-block {
+    display: block; }
+  .reactapp-side-nav .reactapp-side-nav--btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 100; }
+    .reactapp-side-nav .reactapp-side-nav--btn button {
+      border-color: transparent;
+      font-family: Arial;
+      color: #ffffff;
+      font-size: 25px;
+      width: 60px;
+      height: 60px;
+      background: #37383c;
+      padding: 10px 15px;
+      text-decoration: none;
+      cursor: pointer;
+      -webkit-transition: all 0.2s;
+      -moz-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s; }
+      .reactapp-side-nav .reactapp-side-nav--btn button:hover {
+        background: #696a71;
+        text-decoration: none; }
+  .reactapp-side-nav p {
+    color: #fff; }

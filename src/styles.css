@@ -1,0 +1,317 @@
+.content-tile {
+  position: relative; }
+  .content-tile:hover #button-container {
+    opacity: 0.7; }
+    .content-tile:hover #button-container:hover {
+      opacity: 1; }
+
+.my-react-app .content-tile {
+  width: 310px; }
+
+.react-container .content-tile {
+  max-width: 600px;
+  width: 100%; }
+  .react-container .content-tile .dark-background *:not(a) {
+    color: #fff !important; }
+
+.react-container .react-subcontainer--multiple-items .content-tile {
+  max-width: 800px; }
+
+body .slick-prev:before, body .slick-next:before {
+  font-size: 45px; }
+
+.slick-slide {
+  padding-right: 20px; }
+
+.slick-dots li button:before {
+  font-size: 14px; }
+
+body .slick-next, body .slick-prev {
+  width: 60px;
+  height: 60px;
+  background: #696a71;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s; }
+  body .slick-next:hover, body .slick-prev:hover {
+    background: #37383c; }
+
+body .slick-prev {
+  left: -74px; }
+  body .slick-prev:before {
+    content: "\f104";
+    font-family: FontAwesome;
+    opacity: 1; }
+
+body .slick-next {
+  right: -80px; }
+  body .slick-next:before {
+    font-family: FontAwesome;
+    content: "\f105";
+    opacity: 1; }
+
+.container {
+  position: relative; }
+
+.react-container.active {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  z-index: 10000; }
+
+.react-container .bgcolor--default figure {
+  background: #fff; }
+
+.react-subcontainer {
+  padding: 60px 80px 50px 139px;
+  height: 100%;
+  background: #f5f5f5;
+  position: relative;
+  overflow-x: hidden; }
+  .react-subcontainer .items-showcase {
+    height: 100%;
+    margin-top: 0; }
+    .react-subcontainer .items-showcase .content-tile {
+      width: auto;
+      margin: 0 !important; }
+  .react-subcontainer .styles-description {
+    height: 110px; }
+
+.slick-slider {
+  height: 100%; }
+
+.hide-items {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100; }
+  .hide-items button {
+    border-color: transparent;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 25px;
+    background: #696a71;
+    padding: 10px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s; }
+    .hide-items button:hover {
+      background: #37383c;
+      text-decoration: none; }
+
+#button-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  transition: all 0.1s; }
+  #button-container:hover {
+    opacity: 1; }
+  #button-container button {
+    position: relative;
+    border-radius: 2px;
+    border-color: transparent;
+    box-shadow: none;
+    color: #ffffff;
+    font-size: 14px;
+    background: #37383c;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    top: 0;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    cursor: pointer; }
+    #button-container button:after {
+      position: relative;
+      right: 0;
+      font-family: FontAwesome;
+      content: "\f101";
+      display: inline-block;
+      font-size: 16px;
+      padding-left: 10px;
+      -webkit-transition: all 0.2s;
+      -moz-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s; }
+    #button-container button:hover {
+      text-decoration: none; }
+      #button-container button:hover:after {
+        right: -2px; }
+
+#overlay.active {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.7); }
+
+.reactapp--style-block {
+  display: inline-block;
+  padding: 20px; }
+  .reactapp--style-block p {
+    padding: 0;
+    margin: 0;
+    color: #fff; }
+  .reactapp--style-block:nth-child(even) {
+    background: #696a71; }
+  .reactapp--style-block .reactapp--style-block-dropdown {
+    cursor: pointer;
+    background: #fff;
+    height: 30px;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    margin-top: 10px; }
+    .reactapp--style-block .reactapp--style-block-dropdown:after {
+      pointer-events: none;
+      font-family: FontAwesome;
+      content: "\f107";
+      display: block;
+      background: #929292;
+      color: #fff;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 24px;
+      padding: 3px 0 4px 7px; }
+  .reactapp--style-block select {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    height: 29px;
+    padding: 5px;
+    /* If you add too much padding here, the options won't show in IE */
+    width: 110%; }
+
+.react-subcontainer--multiple-items, .react-subcontainer--single-item {
+  display: none;
+  z-index: 103; }
+  .react-subcontainer--multiple-items.active, .react-subcontainer--single-item.active {
+    display: block;
+    z-index: 105; }
+
+.react-subcontainer--multiple-items .slider-options {
+  margin-top: 7px; }
+
+.react-subcontainer--multiple-items .slider-options .reactapp--style-block {
+  width: 200px;
+  padding-left: 0;
+  margin-right: 20px; }
+  .react-subcontainer--multiple-items .slider-options .reactapp--style-block:nth-child(even) {
+    background: transparent; }
+  .react-subcontainer--multiple-items .slider-options .reactapp--style-block p {
+    color: #444444; }
+
+.reactapp-side-nav {
+  width: 372px;
+  height: 100%;
+  background: #41434c;
+  position: absolute;
+  top: 60px;
+  left: -312px;
+  z-index: 103;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  overflow-y: hidden; }
+  .reactapp-side-nav.side-nav-active {
+    left: 0;
+    overflow-y: scroll; }
+  .reactapp-side-nav .reactapp-side-nav--container {
+    position: relative;
+    padding: 0 60px 20px 0; }
+  .reactapp-side-nav .reactapp-side-nav--title {
+    padding: 21px;
+    margin: 0; }
+  .reactapp-side-nav .reactapp--style-block {
+    display: block; }
+  .reactapp-side-nav .reactapp-side-nav--btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 100; }
+    .reactapp-side-nav .reactapp-side-nav--btn button {
+      border-color: transparent;
+      font-family: Arial;
+      color: #ffffff;
+      font-size: 25px;
+      width: 60px;
+      height: 60px;
+      background: #37383c;
+      padding: 10px 15px;
+      text-decoration: none;
+      cursor: pointer;
+      -webkit-transition: all 0.2s;
+      -moz-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s; }
+      .reactapp-side-nav .reactapp-side-nav--btn button:hover {
+        background: #696a71;
+        text-decoration: none; }
+  .reactapp-side-nav p {
+    color: #fff; }
+
+.react-subcontainer--single-item {
+  padding-top: 20px;
+  /*.reactapp--style-block {
+      background: transparent;
+      padding: 10px 20px;
+      width:230px;
+      p {
+        color:#000;
+      }
+    }*/ }
+  .react-subcontainer--single-item .reactapp-side-nav--blocks > .reactapp--style-block {
+    background: #696a71; }
+  .react-subcontainer--single-item p {
+    margin-top: 6px; }
+
+.react-subcontainer--single-item-result {
+  margin-top: 40px;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center; }
+
+.react-subcontainer--nav {
+  position: fixed;
+  top: 20px;
+  left: 80px;
+  z-index: 107;
+  background: #41434c;
+  padding-left: 0;
+  height: 60px; }
+  .react-subcontainer--nav ul {
+    padding: 0;
+    margin: 0;
+    display: flex; }
+    .react-subcontainer--nav ul li a {
+      display: block;
+      padding: 20px 30px;
+      background: #696a71;
+      height: 60px;
+      color: #fff; }
+      .react-subcontainer--nav ul li a:hover {
+        text-decoration: none; }
+    .react-subcontainer--nav ul li.active a {
+      background: #f6f5f6;
+      color: #37383c; }

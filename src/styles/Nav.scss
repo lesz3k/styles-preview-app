@@ -1,0 +1,35 @@
+.react-subcontainer--nav {
+  position: fixed;
+  top: 20px;
+  left: 80px;
+  z-index:107;
+  background: #41434c;
+  padding-left: 0;
+  height: 60px;
+  ul {
+    padding:0;
+    margin:0;
+    display: flex;
+    li{
+      a {
+        display: block;
+        padding: 20px 30px;
+        background:#696a71;
+        height: 60px;
+        color: #fff;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+      &.active {
+        a {
+          background: #f6f5f6;
+          color: #37383c;
+        }
+      }
+      &:hover {
+
+      }
+    }
+  }
+}
