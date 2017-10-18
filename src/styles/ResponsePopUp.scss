@@ -1,0 +1,51 @@
+@import 'Colors.scss';
+
+.reactapp--aem-response-pop-up{
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
+  top:-200px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    top: 30px;
+    z-index: 10100;
+  }
+  .reactapp--aem-response-pop-up-container{
+    position: relative;
+    padding: 40px;
+    background: #fff;
+    text-align: center;
+  }
+  .reactapp--aem-response-pop-up--close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index:100;
+    button {
+      border-color: transparent;
+      font-family: Arial;
+      color: #ffffff;
+      font-size: 16px;
+      background: $primary-red;
+      padding: 10px 20px;
+      text-decoration: none;
+      cursor: pointer;
+      -webkit-transition: all 0.2s;
+      -moz-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s;
+      &:hover {
+        background: $sec-red;
+        text-decoration: none;
+      }
+    }
+  }
+}

@@ -1,3 +1,5 @@
+@import 'Colors.scss';
+
 .content-tile {
   //width:310px;
   position: relative;
@@ -10,8 +12,13 @@
     }
   }
 }
-.my-react-app .content-tile {
-  width:310px;
+.my-react-app {
+  .content-tile {
+    width:310px;
+  }
+  .container {
+    position: relative;
+  }
 }
 .react-container .content-tile {
   max-width:600px;
@@ -26,51 +33,51 @@
   max-width: 800px;
 }
 
-body .slick-prev:before, body .slick-next:before {
+body .react-container .slick-prev:before, body .react-container .slick-next:before {
   //color:#000;
   font-size: 45px;
 }
 
-.slick-slide{
+.react-container .slick-slide{
   padding-right: 20px;
 }
-.slick-dots li button:before {
+.react-container .slick-dots li button:before {
   font-size: 14px;
 }
 
-body .slick-next, body .slick-prev {
-  width:60px;
-  height:60px;
-  background: #696a71;
-  cursor: pointer;
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  transition: all 0.2s;
-  &:hover {
-    background: #37383c;
+body .react-container{
+  .slick-next, .slick-prev {
+    width:60px;
+    height:60px;
+    background: #696a71;
+    cursor: pointer;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    &:hover {
+      background: #37383c;
+    }
   }
-}
-body .slick-prev{
-  left: -74px;
-  &:before{
-    content: "\f104";
-    font-family: FontAwesome;
-    opacity: 1;
+  .slick-prev{
+    left: -74px;
+    &:before{
+      content: "\f104";
+      font-family: FontAwesome;
+      opacity: 1;
+    }
   }
-}
-body .slick-next{
-  right:-80px;
-  &:before{
-    font-family: FontAwesome;
-    content: "\f105";
-    opacity: 1;
+  .slick-next{
+    right:-80px;
+    &:before{
+      font-family: FontAwesome;
+      content: "\f105";
+      opacity: 1;
+    }
   }
 }
 
-.container {
-  position: relative;
-}
+
 .react-container{
   &.active {
     position: fixed;
@@ -102,7 +109,35 @@ body .slick-next{
 
   }
   .styles-description {
-    height: 110px;
+    h4 {
+      font-family: Arial;
+      color:$primary-blue;
+    }
+    .react-app--set-new-style {
+      margin:0 0 20px 0;
+    }
+  }
+  .react-app--set-new-style {
+    margin:20px 0;
+    border:0 $primary-blue solid;
+    font-weight: 700;
+    font-family: Arial;
+    color: $primary-blue;
+    font-size: 14px;
+    background: #fff;
+    padding: 15px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    &:hover {
+      background: $primary-blue;
+      color:#fff;
+      text-decoration: none;
+    }
   }
 }
 
@@ -120,7 +155,7 @@ body .slick-next{
     font-family: Arial;
     color: #ffffff;
     font-size: 25px;
-    background: #696a71;
+    background: $primary-red;
     padding: 10px 20px;
     text-decoration: none;
     cursor: pointer;
@@ -129,7 +164,7 @@ body .slick-next{
     -o-transition: all 0.2s;
     transition: all 0.2s;
     &:hover {
-      background: #37383c;
+      background: $sec-red;
       text-decoration: none;
     }
   }
@@ -208,7 +243,7 @@ body .slick-next{
     color: #fff;
   }
   &:nth-child(even){
-    background: #696a71;
+    background: $primary-blue;
   }
   &:nth-child(odd){
     //background: #37383c;
@@ -258,15 +293,19 @@ body .slick-next{
 }
 .react-subcontainer--multiple-items .slider-options {
   margin-top:7px;
-}
-.react-subcontainer--multiple-items .slider-options .reactapp--style-block{
-  width: 200px;
-  padding-left: 0;
-  margin-right:20px;
-  &:nth-child(even) {
-    background: transparent;
+  .slider-options--descr{
+    display: inline-block;
+    padding: 0 20px 20px 20px;
   }
-  p {
-    color: #444444;
+  .reactapp--style-block{
+    width: 200px;
+    padding-left: 0;
+    margin-right:20px;
+    &:nth-child(even) {
+      background: transparent;
+    }
+    p {
+      color: #444444;
+    }
   }
 }

@@ -8,7 +8,7 @@ import 'slick-carousel/slick/slick.css';
 import AllStylesCombined from '../components/AllStylesCombined';
 import StylesDropdown from '../components/StylesDropdown';
 import {store} from '../store/store';
-import {changeListView} from '../store/actionCreators'
+import {changeListView, setNewAEMstyle, setAEMresponse} from '../store/actionCreators'
 
 
 class ItemsList extends Component {
@@ -23,6 +23,7 @@ class ItemsList extends Component {
     }
     this.onChange = this.onChange.bind(this)
     this.setSlidesToShow = this.setSlidesToShow.bind(this)
+    this.onStyleChange = this.onStyleChange.bind(this)
   }
 
   componentWillMount(){
@@ -49,6 +50,10 @@ class ItemsList extends Component {
       }
     })
   }
+  onStyleChange(item){
+    store.dispatch(setNewAEMstyle(item))
+    store.dispatch(setAEMresponse('reset'))
+  }
 
   render() {
     const {isActive, slider} = this.state
@@ -68,6 +73,8 @@ class ItemsList extends Component {
     let compName = store.getState().compType,
         itemsList = store.getState().listView
 
+    const itemPath = store.getState().itemPath
+
     return (
       <div className={showList}>
           <SideNav>
@@ -76,6 +83,9 @@ class ItemsList extends Component {
 
           <div className="slider-options">
             <StylesDropdown title="Slides to show" arr={slidesToShowArr} onChange={(e) => this.setSlidesToShow(slidesToShowArr, e)} />
+            <div className="slider-options--descr">
+              <p>Components are grouped by 'Layout' styles</p>
+            </div>
           </div>
 
           <div className="items-showcase">
@@ -87,7 +97,8 @@ class ItemsList extends Component {
                 itemsList.map((item, i)=>
                       <div key={i}>
                         <div className="styles-description">
-                          <h4>Style name:</h4><p className="style-name">{item.styleName}</p>
+                          <p className="style-name">{item.styleName}</p>
+                          {itemPath !== null ? <button className="react-app--set-new-style" onClick={()=>this.onStyleChange(item.component.classNames.join(' '))}>Set new style</button> : null}
                         </div>
                         <ContentTile {...item.component} classNames={item.component.classNames.join(' ')} key={i} />
                       </div>

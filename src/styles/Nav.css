@@ -3,7 +3,7 @@
   top: 20px;
   left: 80px;
   z-index: 107;
-  background: #41434c;
+  background: #0e83cd;
   padding-left: 0;
   height: 60px; }
   .react-subcontainer--nav ul {
@@ -13,11 +13,11 @@
     .react-subcontainer--nav ul li a {
       display: block;
       padding: 20px 30px;
-      background: #696a71;
+      background: #0a68a5;
       height: 60px;
       color: #fff; }
       .react-subcontainer--nav ul li a:hover {
         text-decoration: none; }
     .react-subcontainer--nav ul li.active a {
-      background: #f6f5f6;
-      color: #37383c; }
+      background: #f5f5f5;
+      color: #0a68a5; }

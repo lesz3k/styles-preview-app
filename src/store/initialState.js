@@ -1,7 +1,12 @@
 const stateData = {
     compType : 'default',
+    itemPath: '',
     listView: [],
-    singleView : {}
+    singleView : {},
+    styleChangeAEMresponse: {
+      error:false,
+      succcess:false
+    }
 }
 
 //const testing = objectPath.del(stateData.components, [0, 'col1', 1]);

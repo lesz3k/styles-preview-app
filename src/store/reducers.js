@@ -1,6 +1,10 @@
 import C from './constants'
 import {store} from './store'
 import stylesJSON from '../components/compStyles/compStyles'
+import axios from 'axios'
+import querystring from 'querystring'
+import {setAEMresponse} from './actionCreators'
+
 
 let stylesReplace = (oldArr, oldClasses) => {
   let classNameArr = [...oldClasses]
@@ -119,5 +123,59 @@ export const compType = (state="default", action)=> {
   }
 }
 
+export const itemPath = (state='', action)=> {
+  switch (action.type) {
+
+    case C.ADD_ITEM_PATH:
+
+      return action.itemPath
+
+    case C.SET_AEM_STYLES:
+      let itemPath = store.getState().itemPath
+      console.log(action.styles)
+
+      if(itemPath!==null){
+        let newStyles = {'cq:cssClass':action.styles}
+        axios.post(itemPath, querystring.stringify(newStyles))
+        .then(function (response) {
+          console.log(response);
+          store.dispatch(setAEMresponse('success'))
+        })
+        .catch(function (error) {
+          console.log(error);
+          store.dispatch(setAEMresponse('fail'))
+        });
+
+      }
+    default: return state
+  }
+}
+
+
+export const styleChangeAEMresponse = (state={}, action)=> {
+  switch (action.type) {
+
+    case C.SET_AEM_RESPONSE:
+
+      const success = {
+        error:false,
+        succcess:true
+      },
+      fail = {
+        error:true,
+        succcess:false
+      },
+      reset = {
+        error:false,
+        succcess:false
+      }
+      return action.response == 'success' ? success : action.response == 'fail' ? fail : reset
+
+
+
+
+    default: return state
+  }
+}
 
 //console.log(sort(oldState, sortAction))

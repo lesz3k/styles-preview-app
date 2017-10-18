@@ -8,6 +8,9 @@
 .my-react-app .content-tile {
   width: 310px; }
 
+.my-react-app .container {
+  position: relative; }
+
 .react-container .content-tile {
   max-width: 600px;
   width: 100%; }
@@ -17,16 +20,16 @@
 .react-container .react-subcontainer--multiple-items .content-tile {
   max-width: 800px; }
 
-body .slick-prev:before, body .slick-next:before {
+body .react-container .slick-prev:before, body .react-container .slick-next:before {
   font-size: 45px; }
 
-.slick-slide {
+.react-container .slick-slide {
   padding-right: 20px; }
 
-.slick-dots li button:before {
+.react-container .slick-dots li button:before {
   font-size: 14px; }
 
-body .slick-next, body .slick-prev {
+body .react-container .slick-next, body .react-container .slick-prev {
   width: 60px;
   height: 60px;
   background: #696a71;
@@ -35,25 +38,22 @@ body .slick-next, body .slick-prev {
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s; }
-  body .slick-next:hover, body .slick-prev:hover {
+  body .react-container .slick-next:hover, body .react-container .slick-prev:hover {
     background: #37383c; }
 
-body .slick-prev {
+body .react-container .slick-prev {
   left: -74px; }
-  body .slick-prev:before {
+  body .react-container .slick-prev:before {
     content: "\f104";
     font-family: FontAwesome;
     opacity: 1; }
 
-body .slick-next {
+body .react-container .slick-next {
   right: -80px; }
-  body .slick-next:before {
+  body .react-container .slick-next:before {
     font-family: FontAwesome;
     content: "\f105";
     opacity: 1; }
-
-.container {
-  position: relative; }
 
 .react-container.active {
   position: fixed;
@@ -78,8 +78,31 @@ body .slick-next {
     .react-subcontainer .items-showcase .content-tile {
       width: auto;
       margin: 0 !important; }
-  .react-subcontainer .styles-description {
-    height: 110px; }
+  .react-subcontainer .styles-description h4 {
+    font-family: Arial;
+    color: #0e83cd; }
+  .react-subcontainer .styles-description .react-app--set-new-style {
+    margin: 0 0 20px 0; }
+  .react-subcontainer .react-app--set-new-style {
+    margin: 20px 0;
+    border: 0 #0e83cd solid;
+    font-weight: 700;
+    font-family: Arial;
+    color: #0e83cd;
+    font-size: 14px;
+    background: #fff;
+    padding: 15px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s; }
+    .react-subcontainer .react-app--set-new-style:hover {
+      background: #0e83cd;
+      color: #fff;
+      text-decoration: none; }
 
 .slick-slider {
   height: 100%; }
@@ -94,7 +117,7 @@ body .slick-next {
     font-family: Arial;
     color: #ffffff;
     font-size: 25px;
-    background: #696a71;
+    background: #cb4e4e;
     padding: 10px 20px;
     text-decoration: none;
     cursor: pointer;
@@ -103,7 +126,7 @@ body .slick-next {
     -o-transition: all 0.2s;
     transition: all 0.2s; }
     .hide-items button:hover {
-      background: #37383c;
+      background: #f06060;
       text-decoration: none; }
 
 #button-container {
@@ -169,7 +192,7 @@ body .slick-next {
     margin: 0;
     color: #fff; }
   .reactapp--style-block:nth-child(even) {
-    background: #696a71; }
+    background: #0e83cd; }
   .reactapp--style-block .reactapp--style-block-dropdown {
     cursor: pointer;
     background: #fff;
@@ -211,12 +234,14 @@ body .slick-next {
 
 .react-subcontainer--multiple-items .slider-options {
   margin-top: 7px; }
-
-.react-subcontainer--multiple-items .slider-options .reactapp--style-block {
-  width: 200px;
-  padding-left: 0;
-  margin-right: 20px; }
-  .react-subcontainer--multiple-items .slider-options .reactapp--style-block:nth-child(even) {
-    background: transparent; }
-  .react-subcontainer--multiple-items .slider-options .reactapp--style-block p {
-    color: #444444; }
+  .react-subcontainer--multiple-items .slider-options .slider-options--descr {
+    display: inline-block;
+    padding: 0 20px 20px 20px; }
+  .react-subcontainer--multiple-items .slider-options .reactapp--style-block {
+    width: 200px;
+    padding-left: 0;
+    margin-right: 20px; }
+    .react-subcontainer--multiple-items .slider-options .reactapp--style-block:nth-child(even) {
+      background: transparent; }
+    .react-subcontainer--multiple-items .slider-options .reactapp--style-block p {
+      color: #444444; }

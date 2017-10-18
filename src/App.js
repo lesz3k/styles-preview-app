@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import {store} from './store/store';
-import {addCompName, changeSingleView, changeListView} from './store/actionCreators'
+import {addCompName, addItemPath, changeSingleView, changeListView} from './store/actionCreators'
 import './styles.css';
 import ItemsList from './Views/ItemsList'
 import SingleItem from './Views/SingleItem'
+import StyleChangePopUp from './components/StyleChangePopUp'
+
 
 class App extends Component {
   constructor(props) {
@@ -34,6 +36,7 @@ class App extends Component {
 
     //console.log(this.props.compName)
     store.dispatch(addCompName(this.props.compName))
+    store.dispatch(addItemPath(this.props.itemPath))
     store.dispatch(changeSingleView({...this.props}))
     store.dispatch(changeListView({...this.props}))
   }
@@ -67,6 +70,7 @@ class App extends Component {
             <li className={singleItem ? 'active' : null}><a onClick={this.showSingle} href="#">Single item</a></li>
           </ul>
         </div>
+        <StyleChangePopUp />
         <ItemsList {...this.props} isActive={multipleItems ? true : false} />
         <SingleItem {...this.props} isActive={singleItem ? true : false} />
 
