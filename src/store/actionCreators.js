@@ -2,7 +2,7 @@ import C from './constants';
 import {store} from './store';
 //import { v4 } from 'uuid';
 
-export const changeSingleView = (propsObject, arr, val, compName, classNames, title, subtitle, text, img) =>
+export const changeSingleView = (propsObject, arr, val, compName, classNames, title, subtitle, text, img, tileLink) =>
 ({
   type:C.CHANGE_SINGLE_VIEW,
   propsObject: {
@@ -16,10 +16,11 @@ export const changeSingleView = (propsObject, arr, val, compName, classNames, ti
   title,
   subtitle,
   text,
-  img
+  img,
+  tileLink
 })
 
-export const changeListView = (propsObject, arr, val, compName, classNames, title, subtitle, text, img) =>
+export const changeListView = (propsObject, arr, val, compName, classNames, title, subtitle, text, img, tileLink) =>
 ({
   type:C.CHANGE_LIST_VIEW,
   propsObject: {
@@ -33,7 +34,8 @@ export const changeListView = (propsObject, arr, val, compName, classNames, titl
   title,
   subtitle,
   text,
-  img
+  img,
+  tileLink
 })
 
 export const addCompName = compName =>
@@ -58,4 +60,10 @@ export const setAEMresponse = response =>
 ({
   type:C.SET_AEM_RESPONSE,
   response
+})
+
+export const showLoading = (loading) =>
+({
+  type:C.SHOW_LOADING,
+  loading
 })

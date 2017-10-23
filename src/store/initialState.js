@@ -6,7 +6,8 @@ const stateData = {
     styleChangeAEMresponse: {
       error:false,
       succcess:false
-    }
+    },
+    showLoadingIcon: false
 }
 
 //const testing = objectPath.del(stateData.components, [0, 'col1', 1]);

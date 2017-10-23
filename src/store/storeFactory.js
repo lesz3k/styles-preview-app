@@ -1,5 +1,5 @@
 import {createStore, combineReducers, applyMiddleware} from 'redux'
-import {compType, itemPath, singleView, listView, styleChangeAEMresponse} from './reducers'
+import {compType, itemPath, singleView, listView, styleChangeAEMresponse, showLoadingIcon} from './reducers'
 import stateData from './initialState'
 
 const logger = store => next => action => {
@@ -20,7 +20,7 @@ const saver = store => next => action => {
 
 const storeFactory = (initialState = stateData) =>
   applyMiddleware(logger, saver)(createStore)
-  (combineReducers({compType, itemPath, singleView, listView, styleChangeAEMresponse}),stateData)
+  (combineReducers({compType, itemPath, singleView, listView, styleChangeAEMresponse, showLoadingIcon}),stateData)
   /*(localStorage['redux-store']) ?
   JSON.parse(localStorage['redux-store']) : stateData)*/
 

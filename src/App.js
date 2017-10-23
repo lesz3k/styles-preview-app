@@ -7,6 +7,7 @@ import './styles.css';
 import ItemsList from './Views/ItemsList'
 import SingleItem from './Views/SingleItem'
 import StyleChangePopUp from './components/StyleChangePopUp'
+import LoadingIcon from './components/LoadingIcon'
 
 
 class App extends Component {
@@ -61,9 +62,12 @@ class App extends Component {
     if(showTiles){
       hideItems = <div className="hide-items"><button onClick={this.hideTiles}>X</button></div>
     }
+
     return (
       <div className="react-subcontainer">
         {hideItems}
+        {store.getState().showLoadingIcon ? <LoadingIcon /> : null}
+
         <div className="react-subcontainer--nav">
           <ul>
             <li className={multipleItems ? 'active' : null}><a onClick={this.showMultiple} href="#">Multiple items</a></li>

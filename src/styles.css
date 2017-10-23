@@ -11,11 +11,20 @@
 .my-react-app .container {
   position: relative; }
 
+.react-container .content-tile:not([class^='color--']):not([class*=' color--']) p {
+  color: #444; }
+
 .react-container .content-tile {
   max-width: 600px;
   width: 100%; }
-  .react-container .content-tile .dark-background *:not(a) {
+  .react-container .content-tile .dark-background *:not(a), .react-container .content-tile .dark-background p {
     color: #fff !important; }
+    .react-container .content-tile .dark-background *:not(a):hover, .react-container .content-tile .dark-background p:hover {
+      color: #fff !important; }
+  .react-container .content-tile.default-color p {
+    color: #444; }
+  .react-container .content-tile a:hover {
+    color: inherit; }
 
 .react-container .react-subcontainer--multiple-items .content-tile {
   max-width: 800px; }
@@ -103,14 +112,21 @@ body .react-container .slick-next {
       background: #0e83cd;
       color: #fff;
       text-decoration: none; }
+  .react-subcontainer .react-app-loading-icon {
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 10000; }
 
 .slick-slider {
   height: 100%; }
 
 .hide-items {
-  position: absolute;
-  top: 0;
-  right: 0;
+  position: fixed;
+  top: 20px;
+  right: 20px;
   z-index: 100; }
   .hide-items button {
     border-color: transparent;
@@ -350,6 +366,7 @@ body .react-container .slick-next {
   visibility: hidden;
   top: -200px;
   left: 50%;
+  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.55);
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   -webkit-transition: all 0.2s;

@@ -20,12 +20,30 @@
     position: relative;
   }
 }
+.react-container .content-tile:not([class^='color--']):not([class*=' color--']){
+  p {
+    color: #444;
+  }
+}
 .react-container .content-tile {
   max-width:600px;
   width:100%;
   .dark-background {
-    *:not(a){
+    *:not(a), p{
       color:#fff!important;
+      &:hover {
+        color:#fff!important;
+      }
+    }
+  }
+  &.default-color{
+    p {
+      color: #444;
+    }
+  }
+  a {
+    &:hover {
+      color: inherit;
     }
   }
 }
@@ -139,6 +157,14 @@ body .react-container{
       text-decoration: none;
     }
   }
+  .react-app-loading-icon {
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 10000;
+  }
 }
 
 .slick-slider {
@@ -146,9 +172,9 @@ body .react-container{
 }
 
 .hide-items{
-  position: absolute;
-  top: 0;
-  right: 0;
+  position: fixed;
+  top: 20px;
+  right: 20px;
   z-index:100;
   button {
     border-color: transparent;

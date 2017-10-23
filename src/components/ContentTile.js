@@ -1,5 +1,22 @@
 import React, { Component } from 'react';
 
+const TileContainer = ({ifSubtitle, title, text, img, tileLink, ifHasBookCover}) => {
+  return(
+      <a href={tileLink}>
+        <picture>
+          <img className={ifHasBookCover} src={img} />
+        </picture>
+        <figcaption>
+          <h2>{title}</h2>
+          {ifSubtitle}
+          <div className="content-tile-text" dangerouslySetInnerHTML={{__html: text}} >
+          </div>
+        </figcaption>
+      </a>
+  )
+}
+
+
 class ContentTile extends Component {
   constructor(props) {
     super(props)
@@ -37,25 +54,36 @@ class ContentTile extends Component {
   }
   render(){
     //const {title, text, subtitle, img, classNode} = this.state
-    const {classNames, title, subtitle, text, img} = this.props
+    const {classNames, title, subtitle, text, img, tileLink} = this.props
     let ifSubtitle = null
-
     subtitle!==false ? ifSubtitle = <p className="content-tile-subtitle">{subtitle}</p> : true
+    let ifHasBookCover = (classNames.indexOf("content-tile-book-box") > -1 && classNames.indexOf("content-tile-book-box-simple") == -1) ? 'book-cover' : null
+
 
     return (
         <div className={classNames}>
           <div className="content-tile-container">
-      	     <figure className={this.state.darkBg ? 'dark-background' : null} ref="figureBg">
-      	        <picture>
-                  <img src={img} />
-      	        </picture>
-          			<figcaption>
-          				<h2>{title}</h2>
-          				{ifSubtitle}
-          				<div className="content-tile-text" dangerouslySetInnerHTML={{__html: text}} >
-                  </div>
-          			</figcaption>
-      	   </figure>
+
+            {
+              tileLink ? <figure className={this.state.darkBg ? 'dark-background' : null} ref="figureBg">
+                            <TileContainer ifHasBookCover={ifHasBookCover} {...this.props}/>
+                          </figure>
+               :
+               <figure className={this.state.darkBg ? 'dark-background' : null} ref="figureBg">
+                 <picture>
+                   <img className={ifHasBookCover} src={img} />
+                 </picture>
+                 <figcaption>
+                   <h2>{title}</h2>
+                   {ifSubtitle}
+                   <div className="content-tile-text" dangerouslySetInnerHTML={{__html: text}} >
+                   </div>
+                 </figcaption>
+            </figure>
+            }
+
+
+
          </div>
         </div>
 

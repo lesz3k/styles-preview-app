@@ -55,9 +55,20 @@ window.addEventListener("DOMContentLoaded", ()=> {
             title : findText(tile,'h2'),
             subtitle : findText(tile,'.content-tile-subtitle'),
             text : find(tile,'.content-tile-text').innerHTML,
-            img : find(tile,'img') ? find(tile,'img')['srcset'] : false,
+            //img: find(tile,'img') ? find(tile,'img')['srcset'] : false,
+            img : (() => {
+                    if (find(tile,'img')){
+                      if (find(tile,'img')['srcset']){
+                        return find(tile,'img')['srcset']
+                      }
+                      if (find(tile,'img')['src']){
+                        return find(tile,'img')['src']
+                      }
+                    }
+                  })(),
             classNames: classArr(),
-            itemPath: itemPath()
+            itemPath: itemPath(),
+            tileLink: find(tile,'figure > a') ? find(tile,'figure > a')['href'] : false
           }
 
           //create button container

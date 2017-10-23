@@ -8,7 +8,7 @@ import 'slick-carousel/slick/slick.css';
 import AllStylesCombined from '../components/AllStylesCombined';
 import StylesDropdown from '../components/StylesDropdown';
 import {store} from '../store/store';
-import {changeListView, setNewAEMstyle, setAEMresponse} from '../store/actionCreators'
+import {changeListView, setNewAEMstyle, setAEMresponse, showLoading} from '../store/actionCreators'
 
 
 class ItemsList extends Component {
@@ -53,6 +53,7 @@ class ItemsList extends Component {
   onStyleChange(item){
     store.dispatch(setNewAEMstyle(item))
     store.dispatch(setAEMresponse('reset'))
+    store.dispatch(showLoading(true))
   }
 
   render() {

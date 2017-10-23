@@ -12,6 +12,7 @@ class StylesDropdown extends React.Component {
                <p>{title}:</p>
                <div className="reactapp--style-block-dropdown">
                  <select onChange={(e) => this.onChange(e)} className="reactapp--dropdown-select">
+                   <option value="" selected disabled hidden>select here</option>
                  {arr.map((n, i) => {
                    let newVal = n
                    prefix ? newVal = prefix+n : true

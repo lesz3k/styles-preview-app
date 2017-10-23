@@ -3,7 +3,7 @@ import {store} from './store'
 import stylesJSON from '../components/compStyles/compStyles'
 import axios from 'axios'
 import querystring from 'querystring'
-import {setAEMresponse} from './actionCreators'
+import {setAEMresponse, showLoading} from './actionCreators'
 
 
 let stylesReplace = (oldArr, oldClasses) => {
@@ -29,7 +29,8 @@ export const component = (state={}, action)=> {
             subtitle: action.subtitle,
             text: action.text,
             img: action.img,
-            classNames: action.classNames
+            classNames: action.classNames,
+            tileLink: action.tileLink
           }
         default: return state
       }
@@ -140,10 +141,12 @@ export const itemPath = (state='', action)=> {
         .then(function (response) {
           console.log(response);
           store.dispatch(setAEMresponse('success'))
+          store.dispatch(showLoading(false))
         })
         .catch(function (error) {
           console.log(error);
           store.dispatch(setAEMresponse('fail'))
+          store.dispatch(showLoading(false))
         });
 
       }
@@ -173,6 +176,15 @@ export const styleChangeAEMresponse = (state={}, action)=> {
 
 
 
+
+    default: return state
+  }
+}
+
+export const showLoadingIcon = (state={}, action)=> {
+  switch (action.type) {
+    case C.SHOW_LOADING:
+      return action.loading ? true : false
 
     default: return state
   }
