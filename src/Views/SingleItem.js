@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ContentTile from '../components/ContentTile';
+import Text from '../components/Text';
 import AllStylesCombined from '../components/AllStylesCombined';
 import SideNav from '../components/SideNav';
 import PropTypes from 'prop-types';
@@ -31,10 +32,11 @@ class SingleItem extends Component {
     store.dispatch(setNewAEMstyle(classNames))
   }
   render() {
-    const initialView = store.getState().singleView
-    const itemPath = store.getState().itemPath
-    const classNames = initialView.classNames.join(' ')
-    const {isActive} = this.state
+    const initialView = store.getState().singleView,
+          itemPath = store.getState().itemPath,
+          compName = store.getState().compType,
+          classNames = initialView.classNames.join(' '),
+          {isActive} = this.state
 
     const showList = isActive ? "react-subcontainer--single-item active" : "react-subcontainer--single-item"
 
@@ -50,7 +52,19 @@ class SingleItem extends Component {
           <div className="react-subcontainer--single-item-result">
             {itemPath !== null ? <button className="react-app--set-new-style" onClick={()=>store.dispatch(setNewAEMstyle(classNames))}>Set new component style +</button> : null}
 
+
+            {
+            compName === 'contentTile' ?
             <ContentTile {...initialView} classNames={classNames} />
+
+            : compName === 'text' ?
+            <Text {...initialView} classNames={classNames} />
+
+            : null
+
+
+            }
+
           </div>
 
       </div>

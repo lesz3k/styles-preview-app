@@ -5,37 +5,49 @@
     .content-tile:hover #button-container:hover {
       opacity: 1; }
 
-.my-react-app .content-tile {
+.my-react-app .content-tile, .my-react-app .text {
   width: 310px; }
 
 .my-react-app .container {
   position: relative; }
 
-.react-container .content-tile:not([class^='color--']):not([class*=' color--']) p {
+body .react-container.active {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  z-index: 10000; }
+
+body .react-container .bgcolor--default figure {
+  background: #fff; }
+
+body .react-container .content-tile:not([class^='color--']):not([class*=' color--']) p {
   color: #444; }
 
-.react-container .content-tile {
+body .react-container .dark-background *:not(a), body .react-container .dark-background p {
+  color: #fff !important; }
+  body .react-container .dark-background *:not(a):hover, body .react-container .dark-background p:hover {
+    color: #fff !important; }
+
+body .react-container .content-tile {
   max-width: 600px;
   width: 100%; }
-  .react-container .content-tile .dark-background *:not(a), .react-container .content-tile .dark-background p {
-    color: #fff !important; }
-    .react-container .content-tile .dark-background *:not(a):hover, .react-container .content-tile .dark-background p:hover {
-      color: #fff !important; }
-  .react-container .content-tile.default-color p {
+  body .react-container .content-tile.default-color p {
     color: #444; }
-  .react-container .content-tile a:hover {
+  body .react-container .content-tile a:hover {
     color: inherit; }
 
-.react-container .react-subcontainer--multiple-items .content-tile {
+body .react-container .react-subcontainer--multiple-items .content-tile {
   max-width: 800px; }
 
-body .react-container .slick-prev:before, body .react-container .slick-next:before {
+body .react-container .slick-prev:before, body .react-container body .react-container .slick-next:before {
   font-size: 45px; }
 
-.react-container .slick-slide {
+body .react-container .slick-slide {
   padding-right: 20px; }
 
-.react-container .slick-dots li button:before {
+body .react-container .slick-dots li button:before {
   font-size: 14px; }
 
 body .react-container .slick-next, body .react-container .slick-prev {
@@ -63,17 +75,6 @@ body .react-container .slick-next {
     font-family: FontAwesome;
     content: "\f105";
     opacity: 1; }
-
-.react-container.active {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  right: 20px;
-  bottom: 20px;
-  z-index: 10000; }
-
-.react-container .bgcolor--default figure {
-  background: #fff; }
 
 .react-subcontainer {
   padding: 60px 80px 50px 139px;
@@ -333,7 +334,7 @@ body .react-container .slick-next {
   display: -webkit-flex;
   justify-content: center;
   flex-direction: column; }
-  .react-subcontainer--single-item-result .content-tile, .react-subcontainer--single-item-result button {
+  .react-subcontainer--single-item-result * {
     align-self: center; }
 
 .react-subcontainer--nav {

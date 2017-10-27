@@ -13,21 +13,31 @@
   }
 }
 .my-react-app {
-  .content-tile {
+  .content-tile, .text {
     width:310px;
   }
   .container {
     position: relative;
   }
+
 }
-.react-container .content-tile:not([class^='color--']):not([class*=' color--']){
-  p {
-    color: #444;
+body .react-container {
+  &.active {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom:20px;
+    z-index: 10000;
   }
-}
-.react-container .content-tile {
-  max-width:600px;
-  width:100%;
+  .bgcolor--default figure{
+    background: #fff;
+  }
+  .content-tile:not([class^='color--']):not([class*=' color--']){
+    p {
+      color: #444;
+    }
+  }
   .dark-background {
     *:not(a), p{
       color:#fff!important;
@@ -36,34 +46,33 @@
       }
     }
   }
-  &.default-color{
-    p {
-      color: #444;
+  .content-tile {
+    max-width:600px;
+    width:100%;
+    &.default-color{
+      p {
+        color: #444;
+      }
+    }
+    a {
+      &:hover {
+        color: inherit;
+      }
     }
   }
-  a {
-    &:hover {
-      color: inherit;
-    }
+  .react-subcontainer--multiple-items .content-tile {
+    max-width: 800px;
   }
-}
-.react-container .react-subcontainer--multiple-items .content-tile {
-  max-width: 800px;
-}
-
-body .react-container .slick-prev:before, body .react-container .slick-next:before {
-  //color:#000;
-  font-size: 45px;
-}
-
-.react-container .slick-slide{
-  padding-right: 20px;
-}
-.react-container .slick-dots li button:before {
-  font-size: 14px;
-}
-
-body .react-container{
+  .slick-prev:before, body .react-container .slick-next:before {
+    //color:#000;
+    font-size: 45px;
+  }
+  .slick-slide{
+    padding-right: 20px;
+  }
+  .slick-dots li button:before {
+    font-size: 14px;
+  }
   .slick-next, .slick-prev {
     width:60px;
     height:60px;
@@ -95,20 +104,6 @@ body .react-container{
   }
 }
 
-
-.react-container{
-  &.active {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    right: 20px;
-    bottom:20px;
-    z-index: 10000;
-  }
-  .bgcolor--default figure{
-    background: #fff;
-  }
-}
 .react-subcontainer {
   padding: 60px 80px 50px 139px;
   height: 100%;

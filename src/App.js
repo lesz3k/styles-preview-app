@@ -42,10 +42,12 @@ class App extends Component {
     store.dispatch(changeListView({...this.props}))
   }
   hideTiles() {
-    let {node} = this.props
+    let {node} = this.props,
+        cqSideKick = document.querySelectorAll('.cq-sidekick')[0];
     document.getElementById('overlay').classList.remove("active")
     node.classList.remove("active")
     ReactDOM.unmountComponentAtNode(node)
+    cqSideKick ? cqSideKick.setAttribute("style", "visibility:visible;opacity:1;") : false
   }
   showMultiple(){
     this.setState({multipleItems:true})

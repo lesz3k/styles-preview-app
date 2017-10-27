@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ContentTile from '../components/ContentTile';
+import Text from '../components/Text';
 import SideNav from '../components/SideNav';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick-theme.css';
@@ -72,9 +73,8 @@ class ItemsList extends Component {
     const slidesToShowArr = ['default (4)',2,3,4,5,6,7,8]
 
     let compName = store.getState().compType,
-        itemsList = store.getState().listView
-
-    const itemPath = store.getState().itemPath
+        itemsList = store.getState().listView,
+        itemPath = store.getState().itemPath
 
     return (
       <div className={showList}>
@@ -94,17 +94,29 @@ class ItemsList extends Component {
             <Slider ref="slick" {...sliderSettings}>
 
               {
-                compName === 'contentTile' ?
+
                 itemsList.map((item, i)=>
                       <div key={i}>
                         <div className="styles-description">
                           <p className="style-name">{item.styleName}</p>
                           {itemPath !== null ? <button className="react-app--set-new-style" onClick={()=>this.onStyleChange(item.component.classNames.join(' '))}>Set new style</button> : null}
                         </div>
+
+                        {
+                        compName === 'contentTile' ?
                         <ContentTile {...item.component} classNames={item.component.classNames.join(' ')} key={i} />
+
+                        : compName === 'text' ?
+                        <Text {...item.component} classNames={item.component.classNames.join(' ')} key={i} />
+
+                        : null
+
+
+                        }
+
                       </div>
                   )
-                  : null
+
               }
 
             </Slider>

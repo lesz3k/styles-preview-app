@@ -1,5 +1,5 @@
 import C from './constants';
-import {store} from './store';
+//import {store} from './store';
 //import { v4 } from 'uuid';
 
 export const changeSingleView = (propsObject, arr, val, compName, classNames, title, subtitle, text, img, tileLink) =>

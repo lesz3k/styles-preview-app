@@ -32,6 +32,14 @@ export const component = (state={}, action)=> {
             classNames: action.classNames,
             tileLink: action.tileLink
           }
+
+        case 'text' :
+          return {
+            text: action.text,
+            classNames: action.classNames,
+            tileLink: action.tileLink
+          }
+
         default: return state
       }
 
@@ -172,7 +180,7 @@ export const styleChangeAEMresponse = (state={}, action)=> {
         error:false,
         succcess:false
       }
-      return action.response == 'success' ? success : action.response == 'fail' ? fail : reset
+      return action.response === 'success' ? success : action.response === 'fail' ? fail : reset
 
 
 
