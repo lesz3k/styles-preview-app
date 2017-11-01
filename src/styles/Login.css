@@ -1,0 +1,64 @@
+.react-subcontainer--login {
+  padding: 40px;
+  width: 800px;
+  max-height: 450px;
+  background: #f5f5f5;
+  position: relative;
+  overflow-x: hidden;
+  text-align: center; }
+  .react-subcontainer--login .hide-items {
+    position: absolute;
+    top: 0;
+    right: 0; }
+    .react-subcontainer--login .hide-items button {
+      font-size: 22px;
+      padding: 10px 16px; }
+  .react-subcontainer--login p {
+    font-weight: bold; }
+  .react-subcontainer--login .react-subcontainer--login-title {
+    font-size: 20px; }
+  .react-subcontainer--login .react-subcontainer--login-buttons {
+    margin-top: 40px;
+    display: flex; }
+    .react-subcontainer--login .react-subcontainer--login-buttons p {
+      font-size: 18px;
+      margin-top: 0; }
+      .react-subcontainer--login .react-subcontainer--login-buttons p.wrong-password {
+        font-size: 16px;
+        font-weight: normal;
+        color: #cb4e4e; }
+    .react-subcontainer--login .react-subcontainer--login-buttons > div {
+      background: #fff;
+      padding: 40px 40px 20px 40px;
+      width: 50%; }
+    .react-subcontainer--login .react-subcontainer--login-buttons button {
+      display: block;
+      width: 100%;
+      margin: 20px 0;
+      border: 2px #0e83cd solid;
+      font-weight: 700;
+      font-family: Arial;
+      color: #0e83cd;
+      font-size: 14px;
+      background: #fff;
+      padding: 15px 20px;
+      text-decoration: none;
+      text-transform: uppercase;
+      cursor: pointer;
+      -webkit-transition: all 0.2s;
+      -moz-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s; }
+      .react-subcontainer--login .react-subcontainer--login-buttons button:hover, .react-subcontainer--login .react-subcontainer--login-buttons button:active {
+        background: #0e83cd;
+        color: #fff;
+        text-decoration: none; }
+    .react-subcontainer--login .react-subcontainer--login-buttons input {
+      padding: 15px;
+      font-size: 14px;
+      color: #444444;
+      width: 100%; }
+  .react-subcontainer--login .react-subcontainer--login-as-designer {
+    margin-right: 20px; }
+  .react-subcontainer--login .react-subcontainer--login-as-editor {
+    margin-left: 20px; }

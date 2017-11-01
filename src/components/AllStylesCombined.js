@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import StylesDropdown from './StylesDropdown';
 import stylesJSON from './compStyles/compStyles';
+import designerStylesJSON from './compStyles/designerCompStyles';
 import {store} from '../store/store';
 import PropTypes from 'prop-types';
 
@@ -10,7 +11,8 @@ class AllStylesCombined extends React.Component {
   }
   render() {
     let compName = store.getState().compType,
-        styles = stylesJSON[compName]
+        designer = store.getState().loggedAsDesigner,
+        styles = designer ? designerStylesJSON[compName] : stylesJSON[compName];
 
     const {exclude} = this.props
     return (

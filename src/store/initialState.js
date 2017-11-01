@@ -1,5 +1,8 @@
+let storage = sessionStorage.getItem("designerTemplate")
+
 const stateData = {
     compType : 'default',
+    loggedAsDesigner: (storage == 'editor') ? false : true,
     itemPath: '',
     listView: [],
     singleView : {},

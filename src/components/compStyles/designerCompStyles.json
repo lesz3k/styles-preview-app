@@ -1,0 +1,10 @@
+{
+  "contentTile" : {
+    "Layout": ["content-tile-default", "content-tile-panel-item", "content-tile-panel-item-main", "content-tile-panel-item-homepage"],
+    "Background color": ["bgcolor--default", "bgcolor--chalk-white", "bgcolor--fresh-green", "bgcolor--graphite-grey", "bgcolor--grass-green", "bgcolor--hot-pink", "bgcolor--ice-blue", "bgcolor--ink-black", "bgcolor--ink-blue", "bgcolor--juicy-orange", "bgcolor--lime-green", "bgcolor--marine-turquoise", "bgcolor--midnight-blue", "bgcolor--pearson-blue", "bgcolor--royal-purple", "bgcolor--strawberry-red", "bgcolor--sunshine-yellow", "bgcolor--grey-15", "bgcolor--grey-20", "bgcolor--grey-30", "bgcolor--grey-75", "bgcolor--grey-85", "bgcolor--grey-95"]
+  },
+  "text" : {
+    "Layout" : ["text-default", "intro-copy", "small-body-copy", "btn-primary"],
+    "Color" : ["default-color", "color--chalk-white", "color--fresh-green", "color--grass-green", "color--hot-pink", "color--ice-blue", "color--ink-black", "color--ink-blue", "color--juicy-orange", "color--lime-green", "color--marine-turquoise", "color--midnight-blue", "color--pearson-blue", "color--royal-purple", "color--strawberry-red", "color--sunshine-yellow", "color--grey-15", "color--grey-20", "color--grey-75", "color--grey-85"]
+  }
+}

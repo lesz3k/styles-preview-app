@@ -1,6 +1,7 @@
 import C from './constants'
 import {store} from './store'
 import stylesJSON from '../components/compStyles/compStyles'
+import designerStylesJSON from '../components/compStyles/designerCompStyles'
 import axios from 'axios'
 import querystring from 'querystring'
 import {setAEMresponse, showLoading} from './actionCreators'
@@ -54,7 +55,9 @@ export const listView = (state=[], action)=> {
     case C.CHANGE_LIST_VIEW:
 
       let compName = store.getState().compType,
-          layoutStyles = stylesJSON[compName].Layout
+          //layoutStyles = stylesJSON[compName].Layout
+          designer = store.getState().loggedAsDesigner,
+          layoutStyles = designer ? designerStylesJSON[compName].Layout : stylesJSON[compName].Layout;
 
       if (!action.propsObject.isEmpty) {
         let oldClasses = action.propsObject.classNames,
@@ -193,6 +196,18 @@ export const showLoadingIcon = (state={}, action)=> {
   switch (action.type) {
     case C.SHOW_LOADING:
       return action.loading ? true : false
+
+    default: return state
+  }
+}
+
+export const loggedAsDesigner = (state='designer', action)=> {
+  switch (action.type) {
+
+    case C.LOG_AS_DESIGNER:
+
+      //return action.logged
+      return action.logged === 'editor' ? false : true
 
     default: return state
   }

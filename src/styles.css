@@ -1,8 +1,8 @@
-.content-tile {
+.content-tile, .text {
   position: relative; }
-  .content-tile:hover #button-container {
+  .content-tile:hover #button-container, .text:hover #button-container {
     opacity: 0.7; }
-    .content-tile:hover #button-container:hover {
+    .content-tile:hover #button-container:hover, .text:hover #button-container:hover {
       opacity: 1; }
 
 .my-react-app .content-tile, .my-react-app .text {
@@ -41,7 +41,7 @@ body .react-container .content-tile {
 body .react-container .react-subcontainer--multiple-items .content-tile {
   max-width: 800px; }
 
-body .react-container .slick-prev:before, body .react-container body .react-container .slick-next:before {
+body .react-container .slick-prev:before, body .react-container .slick-next:before {
   font-size: 45px; }
 
 body .react-container .slick-slide {
@@ -76,9 +76,15 @@ body .react-container .slick-next {
     content: "\f105";
     opacity: 1; }
 
+.react-mainsubcontainer {
+  display: flex;
+  justify-content: center;
+  height: 100%; }
+
 .react-subcontainer {
   padding: 60px 80px 50px 139px;
   height: 100%;
+  width: 100%;
   background: #f5f5f5;
   position: relative;
   overflow-x: hidden; }
@@ -135,7 +141,8 @@ body .react-container .slick-next {
     color: #ffffff;
     font-size: 25px;
     background: #cb4e4e;
-    padding: 10px 20px;
+    width: 60px;
+    height: 60px;
     text-decoration: none;
     cursor: pointer;
     -webkit-transition: all 0.2s;
@@ -341,8 +348,9 @@ body .react-container .slick-next {
   position: fixed;
   top: 20px;
   left: 80px;
+  right: 80px;
   z-index: 107;
-  background: #0e83cd;
+  background: #cacaca;
   padding-left: 0;
   height: 60px; }
   .react-subcontainer--nav ul {
@@ -360,6 +368,9 @@ body .react-container .slick-next {
     .react-subcontainer--nav ul li.active a {
       background: #f5f5f5;
       color: #0a68a5; }
+    .react-subcontainer--nav ul li.react-subcontainer--nav-change-user-type {
+      margin-left: auto;
+      padding: 20px 30px; }
 
 .reactapp--aem-response-pop-up {
   position: fixed;
@@ -405,3 +416,68 @@ body .react-container .slick-next {
       .reactapp--aem-response-pop-up .reactapp--aem-response-pop-up--close button:hover {
         background: #f06060;
         text-decoration: none; }
+
+.react-subcontainer--login {
+  padding: 40px;
+  width: 800px;
+  max-height: 450px;
+  background: #f5f5f5;
+  position: relative;
+  overflow-x: hidden;
+  text-align: center; }
+  .react-subcontainer--login .hide-items {
+    position: absolute;
+    top: 0;
+    right: 0; }
+    .react-subcontainer--login .hide-items button {
+      font-size: 22px;
+      padding: 10px 16px; }
+  .react-subcontainer--login p {
+    font-weight: bold; }
+  .react-subcontainer--login .react-subcontainer--login-title {
+    font-size: 20px; }
+  .react-subcontainer--login .react-subcontainer--login-buttons {
+    margin-top: 40px;
+    display: flex; }
+    .react-subcontainer--login .react-subcontainer--login-buttons p {
+      font-size: 18px;
+      margin-top: 0; }
+      .react-subcontainer--login .react-subcontainer--login-buttons p.wrong-password {
+        font-size: 16px;
+        font-weight: normal;
+        color: #cb4e4e; }
+    .react-subcontainer--login .react-subcontainer--login-buttons > div {
+      background: #fff;
+      padding: 40px 40px 20px 40px;
+      width: 50%; }
+    .react-subcontainer--login .react-subcontainer--login-buttons button {
+      display: block;
+      width: 100%;
+      margin: 20px 0;
+      border: 2px #0e83cd solid;
+      font-weight: 700;
+      font-family: Arial;
+      color: #0e83cd;
+      font-size: 14px;
+      background: #fff;
+      padding: 15px 20px;
+      text-decoration: none;
+      text-transform: uppercase;
+      cursor: pointer;
+      -webkit-transition: all 0.2s;
+      -moz-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s; }
+      .react-subcontainer--login .react-subcontainer--login-buttons button:hover, .react-subcontainer--login .react-subcontainer--login-buttons button:active {
+        background: #0e83cd;
+        color: #fff;
+        text-decoration: none; }
+    .react-subcontainer--login .react-subcontainer--login-buttons input {
+      padding: 15px;
+      font-size: 14px;
+      color: #444444;
+      width: 100%; }
+  .react-subcontainer--login .react-subcontainer--login-as-designer {
+    margin-right: 20px; }
+  .react-subcontainer--login .react-subcontainer--login-as-editor {
+    margin-left: 20px; }

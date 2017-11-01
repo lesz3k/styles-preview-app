@@ -67,3 +67,9 @@ export const showLoading = (loading) =>
   type:C.SHOW_LOADING,
   loading
 })
+
+export const logAsDesigner = (logged) =>
+({
+  type:C.LOG_AS_DESIGNER,
+  logged
+})

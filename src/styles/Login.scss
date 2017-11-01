@@ -1,0 +1,83 @@
+@import 'Colors.scss';
+
+.react-subcontainer--login {
+  padding: 40px;
+  width: 800px;
+  max-height: 450px;
+  background: $grey-bg;
+  position: relative;
+  overflow-x: hidden;
+  text-align: center;
+  .hide-items {
+    position: absolute;
+    top:0;
+    right:0;
+    button{
+      font-size: 22px;
+      padding: 10px 16px;
+    }
+  }
+  p {
+    font-weight: bold;
+  }
+  .react-subcontainer--login-title {
+    font-size: 20px;
+  }
+  .react-subcontainer--login-buttons {
+    margin-top: 40px;
+    display: flex;
+    p {
+      font-size: 18px;
+      margin-top:0;
+      &.wrong-password {
+        font-size: 16px;
+        font-weight: normal;
+        color: $primary-red;
+      }
+    }
+    >div {
+      background: #fff;
+      padding: 40px 40px 20px 40px;
+      width: 50%;
+      //margin:40px 0;
+    }
+    button {
+      display: block;
+      width: 100%;
+      margin:20px 0;
+      border:2px $primary-blue solid;
+      font-weight: 700;
+      font-family: Arial;
+      color: $primary-blue;
+      font-size: 14px;
+      background: #fff;
+      padding: 15px 20px;
+      text-decoration: none;
+      text-transform: uppercase;
+      cursor: pointer;
+      -webkit-transition: all 0.2s;
+      -moz-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s;
+      &:hover, &:active {
+        background: $primary-blue;
+        color:#fff;
+        text-decoration: none;
+      }
+    }
+    input {
+      padding: 15px;
+      font-size: 14px;
+      color:$text;
+      width:100%;
+    }
+  }
+  .react-subcontainer--login-as-designer {
+    margin-right: 20px;
+    //padding-bottom: 20px;
+    //border-bottom: 1px solid $border-grey;
+  }
+  .react-subcontainer--login-as-editor {
+    margin-left: 20px;
+  }
+}
