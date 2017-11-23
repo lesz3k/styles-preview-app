@@ -14,10 +14,11 @@ class StylesDropdown extends React.Component {
                  <select onChange={(e) => this.onChange(e)} className="reactapp--dropdown-select">
                    <option defaultValue>select here</option>
                  {arr.map((n, i) => {
-                   let newVal = n
+                   let newVal = () => n['style'] !== undefined ? n['style'] : n
+
                    prefix ? newVal = prefix+n : true
-                    return <option key={i} value={newVal}>
-                         {newVal}
+                    return <option key={i} value={newVal()}>
+                         {n['name'] !== undefined ? n['name'] : n}
                      </option>
                    }
                    )

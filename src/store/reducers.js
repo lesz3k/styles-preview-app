@@ -10,9 +10,18 @@ import {setAEMresponse, showLoading} from './actionCreators'
 let stylesReplace = (oldArr, oldClasses) => {
   let classNameArr = [...oldClasses]
   const newArr = classNameArr.reduce((total, amount) => {
-    if (!oldArr.includes(amount)){
+
+    /*if (!oldArr.includes(amount)){
+      total.push(amount)
+    }*/
+    let testArr = oldArr.map(e=>{
+      return e.style
+    })
+
+    if (!testArr.includes(amount)){
       total.push(amount)
     }
+
     return total;
   }, []);
   return newArr
@@ -65,10 +74,10 @@ export const listView = (state=[], action)=> {
 
         //return component({}, action.propsObject)
         return layoutStyles.map(style =>{
-            let newStyle = [...reducedClasses, style]
+            let newStyle = [...reducedClasses, style['style']]
 
                 return {
-                  styleName:style,
+                  styleName:style['name'],
                   component: component({}, {...action.propsObject, classNames: newStyle})
                 }
 
