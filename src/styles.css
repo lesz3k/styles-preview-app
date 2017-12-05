@@ -76,6 +76,9 @@ body .react-container .slick-next {
     content: "\f105";
     opacity: 1; }
 
+body .react-container button {
+  border-radius: 0; }
+
 .react-mainsubcontainer {
   display: flex;
   justify-content: center;
@@ -301,6 +304,7 @@ body .react-container .slick-next {
     z-index: 100; }
     .reactapp-side-nav .reactapp-side-nav--btn button {
       border-color: transparent;
+      border-radius: 0;
       font-family: Arial;
       color: #ffffff;
       font-size: 25px;

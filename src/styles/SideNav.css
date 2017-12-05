@@ -29,6 +29,7 @@
     z-index: 100; }
     .reactapp-side-nav .reactapp-side-nav--btn button {
       border-color: transparent;
+      border-radius: 0;
       font-family: Arial;
       color: #ffffff;
       font-size: 25px;
