@@ -11,34 +11,34 @@
   { "name": "Hero - curve, overlay, 60vh, vert center align", "style": "content-tile-homepage-hero" },
   { "name": "Text over hero image", "style": "content-tile-hero-text" },
   { "name": "Hero - curve, no overlay", "style": "content-tile-hero-curved" },
-  { "name": "Max image width - 300px", "style": "img-max-width-300" },
+  { "name": "Image width 300px", "style": "img-max-width-300" },
   { "name": "Display only on desktop view", "style": "only-desktop" },
-  { "name": "Video highlight box", "style": "content-tile-panel-video" },
+  { "name": "Video highlight box (button centered)", "style": "content-tile-panel-video" },
   { "name": "Video highlight box - v2", "style": "content-tile-panel-video-v2" },
   { "name": "Expandable block", "style": "content-tile-content-expander-link" },
-  { "name": "Blockquote", "style": "content-tile-blockquote" },
-  { "name": "Blockquote content", "style": "content-tile-blockquote-content" },
-  { "name": "Blockquote grey", "style": "content-tile-blockquote-grey" },
-  { "name": "Section title image", "style": "content-tile-section-title-image" },
-  { "name": "Panel item info", "style": "content-tile-panel-item-info" },
-  { "name": "Contact info", "style": "content-tile-contact-info" },
+  { "name": "Blockquote (circle author image)", "style": "content-tile-blockquote" },
+  { "name": "Blockquote (50 image / 50 content)", "style": "content-tile-blockquote-content" },
+  { "name": "Blockquote (50 content / 50 image)", "style": "content-tile-blockquote-grey" },
+  { "name": "Section Title (centered)", "style": "content-tile-section-title-image" },
+  { "name": "Panel Item", "style": "content-tile-panel-item-info" },
+  { "name": "Contact Info", "style": "content-tile-contact-info" },
   { "name": "Accordion list panel", "style": "content-tile-accordion-panel" },
   { "name": "Items list", "style": "content-tile-items-list" },
   { "name": "Color block - full image, left margin", "style": "content-tile-color-block--full-img--left-margin" },
-  { "name": "Color block - full image", "style": "content-tile-color-block--full-img" },
+  { "name": "Color block - full image, text left", "style": "content-tile-color-block--full-img" },
   { "name": "Color block - full image, text right", "style": "content-tile-color-block--full-img--text-right" },
-  { "name": "Color block - half image, image left", "style": "content-tile-color-block--half-img" },
-  { "name": "Color block - half image, image right", "style": "content-tile-color-block--half-img--text-right" },
+  { "name": "Color block - half image, text right", "style": "content-tile-color-block--half-img" },
+  { "name": "Color block - half image, text left", "style": "content-tile-color-block--half-img--text-right" },
   { "name": "Info small image", "style": "content-tile-info-small-img" },
   { "name": "Sub hero", "style": "content-tile-sub-hero" },
   { "name": "Square image", "style": "content-tile-square-img" },
   { "name": "View larger icon", "style": "view-larger" },
   { "name": "Social / contact icon", "style": "content-tile-icon" },
-  { "name": "Panel item category", "style": "content-tile-panel-item-category" },
-  { "name": "Panel item simple", "style": "content-tile-panel-item-simple" },
-  { "name": "Panel item simple - blue title", "style": "content-tile-panel-item-simple--blue-title" },
-  { "name": "Panel item news box", "style": "content-tile-panel-item-news-box" },
-  { "name": "Panel item news box with button", "style": "content-tile-panel-item-news-box--with-button" },
+  { "name": "Panel Item (with link border)", "style": "content-tile-panel-item-category" },
+  { "name": "Panel Item (small title)", "style": "content-tile-panel-item-simple" },
+  { "name": "Panel Item (blue title)", "style": "content-tile-panel-item-simple--blue-title" },
+  { "name": "News Box", "style": "content-tile-panel-item-news-box" },
+  { "name": "News Box (with button)", "style": "content-tile-panel-item-news-box--with-button" },
   { "name": "Resource listing", "style": "content-tile-panel-item-file-download" },
   { "name": "Resource listing v2", "style": "content-tile-panel-item-file-download-v2" },
   { "name": "Product tile", "style": "content-tile-book-box" },
@@ -64,12 +64,12 @@
   { "name": "Royal Purple", "style": "bgcolor--royal-purple" },
   { "name": "Strawberry Red", "style": "bgcolor--strawberry-red" },
   { "name": "Sunshine Yellow", "style": "bgcolor--sunshine-yellow" },
-  { "name": "Grey 15", "style": "bgcolor--grey-15" },
-  { "name": "Grey 20", "style": "bgcolor--grey-20" },
-  { "name": "Grey 30", "style": "bgcolor--grey-30" },
-  { "name": "Grey 75", "style": "bgcolor--grey-75" },
-  { "name": "Grey 85", "style": "bgcolor--grey-85" },
-  { "name": "Grey 95", "style": "bgcolor--grey-95" } ]
+  { "name": "Darkest Grey", "style": "bgcolor--grey-15" },
+  { "name": "Dark Grey (font color)", "style": "bgcolor--grey-20" },
+  { "name": "Medium Dark Grey (graphite grey)", "style": "bgcolor--grey-30" },
+  { "name": "Medium Light Grey", "style": "bgcolor--grey-75" },
+  { "name": "Light Grey", "style": "bgcolor--grey-85" },
+  { "name": "Lightest Grey (row background)", "style": "bgcolor--grey-95" } ]
 ,
 "Text color":
 [ { "name": "Default", "style": "default-color" },
@@ -89,11 +89,12 @@
   { "name": "Royal Purple", "style": "color--royal-purple" },
   { "name": "Strawberry Red", "style": "color--strawberry-red" },
   { "name": "Sunshine Yellow", "style": "color--sunshine-yellow" },
-  { "name": "Grey 15", "style": "color--grey-15" },
-  { "name": "Grey 20", "style": "color--grey-20" },
-  { "name": "Grey 30", "style": "color--grey-30" },
-  { "name": "Grey 75", "style": "color--grey-75" },
-  { "name": "Grey 85", "style": "color--grey-85" } ]
+  { "name": "Darkest Grey", "style": "color--grey-15" },
+  { "name": "Dark Grey (font color)", "style": "color--grey-20" },
+  { "name": "Medium Dark Grey (graphite grey)", "style": "color--grey-30" },
+  { "name": "Medium Light Grey", "style": "color--grey-75" },
+  { "name": "Light Grey", "style": "color--grey-85" },
+  { "name": "Lightest Grey (row background)", "style": "color--grey-95" } ]
 ,
 "Title type family":
 [ { "name": "Default", "style": "default-title-typefamily" },
@@ -143,12 +144,12 @@
   { "name": "Royal Purple", "style": "title-color--royal-purple" },
   { "name": "Strawberry Red", "style": "title-color--strawberry-red" },
   { "name": "Sunshine Yellow", "style": "title-color--sunshine-yellow" },
-  { "name": "Grey 15", "style": "title-color--grey-15" },
-  { "name": "Grey 20", "style": "title-color--grey-20" },
-  { "name": "Grey 30", "style": "title-color--grey-30" },
-  { "name": "Grey 75", "style": "title-color--grey-75" },
-  { "name": "Grey 85", "style": "title-color--grey-85" },
-  { "name": "Grey 95", "style": "title-color--grey-95" } ]
+  { "name": "Darkest Grey", "style": "title-color--grey-15" },
+  { "name": "Dark Grey (font color)", "style": "title-color--grey-20" },
+  { "name": "Medium Dark Grey (graphite grey)", "style": "title-color--grey-30" },
+  { "name": "Medium Light Grey", "style": "title-color--grey-75" },
+  { "name": "Light Grey", "style": "title-color--grey-85" },
+  { "name": "Lightest Grey (row background)", "style": "title-color--grey-95" } ]
 ,
 "Subtitle type family":
 [ { "name": "Default", "style": "default-subtitle-typefamily" },
@@ -198,12 +199,12 @@
   { "name": "Royal Purple", "style": "subtitle-color--royal-purple" },
   { "name": "Strawberry Red", "style": "subtitle-color--strawberry-red" },
   { "name": "Sunshine Yellow", "style": "subtitle-color--sunshine-yellow" },
-  { "name": "Grey 15", "style": "subtitle-color--grey-15" },
-  { "name": "Grey 20", "style": "subtitle-color--grey-20" },
-  { "name": "Grey 30", "style": "subtitle-color--grey-30" },
-  { "name": "Grey 75", "style": "subtitle-color--grey-75" },
-  { "name": "Grey 85", "style": "subtitle-color--grey-85" },
-  { "name": "Grey 95", "style": "subtitle-color--grey-95" } ]
+  { "name": "Darkest Grey", "style": "subtitle-color--grey-15" },
+  { "name": "Dark Grey (font color)", "style": "subtitle-color--grey-20" },
+  { "name": "Medium Dark Grey (graphite grey)", "style": "subtitle-color--grey-30" },
+  { "name": "Medium Light Grey", "style": "subtitle-color--grey-75" },
+  { "name": "Light Grey", "style": "subtitle-color--grey-85" },
+  { "name": "Lightest Grey (row background)", "style": "subtitle-color--grey-95" } ]
 ,
 "Column count":
 [ { "name": "Default (1 column)",
@@ -221,8 +222,8 @@
   { "name": "Ghost (on light)", "style": "button-ghost--on-light" } ]
 ,
 "Button width":
-[ { "name": "Auto (inline-block)", "style": "default-btn-width" },
-  { "name": "Full (block)", "style": "button--block" } ]
+[ { "name": "Default", "style": "default-btn-width" },
+  { "name": "Full width (block)", "style": "button--block" } ]
 ,
 "Button size":
 [ { "name": "Default", "style": "default-btn-size" },
@@ -327,11 +328,11 @@
   { "name": "Royal Purple", "style": "color--royal-purple" },
   { "name": "Strawberry Red", "style": "color--strawberry-red" },
   { "name": "Sunshine Yellow", "style": "color--sunshine-yellow" },
-  { "name": "Grey 15", "style": "color--grey-15" },
-  { "name": "Grey 20", "style": "color--grey-20" },
-  { "name": "Grey 30", "style": "color--grey-30" },
-  { "name": "Grey 75", "style": "color--grey-75" },
-  { "name": "Grey 85", "style": "color--grey-85" } ]
+  { "name": "Darkest Grey", "style": "color--grey-15" },
+  { "name": "Dark Grey (font color)", "style": "color--grey-20" },
+  { "name": "Medium Dark Grey (graphite grey)", "style": "color--grey-30" },
+  { "name": "Medium Light Grey", "style": "color--grey-75" },
+  { "name": "Light Grey", "style": "color--grey-85" } ]
 ,
 "Background color":
 [ { "name": "Default", "style": "bgcolor--default" },
@@ -351,12 +352,12 @@
   { "name": "Royal Purple", "style": "bgcolor--royal-purple" },
   { "name": "Strawberry Red", "style": "bgcolor--strawberry-red" },
   { "name": "Sunshine Yellow", "style": "bgcolor--sunshine-yellow" },
-  { "name": "Grey 15", "style": "bgcolor--grey-15" },
-  { "name": "Grey 20", "style": "bgcolor--grey-20" },
-  { "name": "Grey 30", "style": "bgcolor--grey-30" },
-  { "name": "Grey 75", "style": "bgcolor--grey-75" },
-  { "name": "Grey 85", "style": "bgcolor--grey-85" },
-  { "name": "Grey 95", "style": "bgcolor--grey-95" } ]
+  { "name": "Darkest Grey", "style": "bgcolor--grey-15" },
+  { "name": "Dark Grey (font color)", "style": "bgcolor--grey-20" },
+  { "name": "Medium Dark Grey (graphite grey)", "style": "bgcolor--grey-30" },
+  { "name": "Medium Light Grey", "style": "bgcolor--grey-75" },
+  { "name": "Light Grey", "style": "bgcolor--grey-85" },
+  { "name": "Lightest Grey (row background)", "style": "bgcolor--grey-95" } ]
 ,
 "Padding vertical":
 [ { "name": "Deafult", "style": "default-padding" },
@@ -407,8 +408,8 @@
   { "name": "Ghost (on light)", "style": "button-ghost--on-light" } ]
 ,
 "Button width":
-[ { "name": "Auto (inline-block)", "style": "default-btn-width" },
-  { "name": "Full (block)", "style": "button--block" } ]
+[ { "name": "Default", "style": "default-btn-width" },
+  { "name": "Full width (block)", "style": "button--block" } ]
 ,
 "Button size":
 [ { "name": "Default", "style": "default-btn-size" },
